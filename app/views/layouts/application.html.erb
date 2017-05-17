@@ -9,9 +9,8 @@
   </head>
 
   <body>
-    <% if flash[:notice] != nil %>
-      <p><%= flash[:notice] %></p>
-    <% end %>
+    <%= render "layouts/flash" %>
+
     <%= yield %>
   </body>
 </html>
