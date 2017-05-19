@@ -1,6 +1,9 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+.jumbotron{background-image: asset-url("ruby_code.jpg");}
+.jumbotron{background-repeat: no-repeat;}
+.jumbotron h1{color: #ffffff;}
 .article-title{font-size: 25px;font-weight: 500;}
 .article-actions{border-top: 1px solid #ccc;padding-top: 10px;margin-top: 10px; }
 .article-body{padding-top: 10px;margin-top: 10px; }
