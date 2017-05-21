@@ -9,7 +9,7 @@
           <%= truncate(article.description, length: 300) %>
           <small>Created by: <%= article.user.username %>, Created at: <%= time_ago_in_words(article.created_at)  %> ago, Last Updated at: <%= time_ago_in_words(article.updated_at) %> ago</small>
         </div>
-        <% if logged_in? && current_user  == article.user %>
+        <% if logged_in? && (current_user  == article.user || current_user.admin?)%>
         <div class="article-actions">
           <%= link_to "Edit", edit_article_path(article) , class: "btn btn-info btn-xs" %>
           <%= link_to "Delete", article_path(article) , method: :delete ,data: {confirm: "Are you sure"} , class: "btn btn-danger btn-xs"%>

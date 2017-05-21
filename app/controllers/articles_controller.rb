@@ -52,7 +52,7 @@ class ArticlesController < ApplicationController
     @article = Article.find(params[:id])
   end
   def required_same_user
-    if current_user != @article.user
+    if current_user != @article.user && !current_user.admin?
       flash[:danger] = "You are not authorized"
       redirect_to root_path
     end
